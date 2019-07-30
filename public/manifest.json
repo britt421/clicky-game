@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Kratts App",
+  "name": "Wild Kratts Clicky Game App",
   "icons": [
     {
       "src": "favicon.ico",
