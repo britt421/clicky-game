@@ -14,5 +14,3 @@ The frontend was built using react components. The images from the Kid's TV Show
 * React
 * Bootstrap
 
-### Portfolio 
-
