@@ -8,7 +8,7 @@ const Card = props => (
                 <img alt={props.name} src={props.image} id={props.id}
                     // This onClick function is triggered when the image is clicked. It basically
                     // calls the shuffleArt method which has a paramenter of the id of the image.
-                    onClick={() => props.shuffleArt(props.id)}
+                    onClick={() => props.shuffleCharacters(props.id)}
                 />
             </div>
         </div>
