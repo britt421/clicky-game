@@ -6,10 +6,9 @@ import Card from "./components/Card";
 import Jumbotron from "./components/Jumbotron";
 import character from "./cards.json";
 import Wrapper from "./components/Wrapper";
-import Footer from "./components/Footer";
 
 class App extends Component {
-  // Setting the initial state. I am using the array of artwork images that is imported from cards.json.
+  // Setting the initial state. I am using the array of character images that is imported from cards.json.
   state = {
     character,
     clickedCharacters: [],
@@ -21,7 +20,7 @@ class App extends Component {
   shuffleCharacters = id => {
     let clickedCharacters = this.state.clickedCharacters;
 
-    // If the id of the clicked artwork ...
+    // If the id of the clicked character ...
     if(clickedCharacters.includes(id)) {
       this.setState({ clickedCharacters: [], score: 0, message:  "Oops - Try Again!" });
       return;
@@ -47,7 +46,6 @@ class App extends Component {
             character[i] = character[j];
             character[j] = temp;
         }
-         
       };
       shuffle(character);
     }
@@ -59,12 +57,12 @@ render() {
   return (
     
     <div>
+      <Wrapper>
+      <Jumbotron />
       <Navbar 
       score={this.state.score}
       message={this.state.message} 
       />
-      <Jumbotron />
-      <Wrapper>
         {this.state.character.map(item => (
               <Card
                 shuffleCharacters={this.shuffleCharacters}
@@ -74,7 +72,6 @@ render() {
               />
         ))}
       </Wrapper>
-      <Footer />
     </div>
         
   );

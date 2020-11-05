@@ -3,6 +3,8 @@
     background-color: white;
     color: black;
     align-content: center;
+    width: 96%;
+    justify-content: center;
 }
 
 span {
